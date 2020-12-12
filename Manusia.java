@@ -9,15 +9,30 @@ package datamodel;
  *
  * @author SYARIF
  */
-public final class Perempuan extends Manusia{
-
-    public Perempuan(String nama, Double tinggibadan) {
-        super(nama, tinggibadan);
-    }
+public abstract class Manusia {
+    private String nama;
+    private Double tinggibadan;
     
-    @Override
-    public Double hitungbb() {
-        return (super.getTinggibadan()-100)*0.9;
+    public Manusia(String nama, Double tinggibadan){
+        this.nama=nama;
+        this.tinggibadan=tinggibadan;
     }
+
+    public String getNama() {
+        return nama;
+    }
+
+    public void setNama(String nama) {
+        this.nama = nama;
+    }
+
+    public Double getTinggibadan() {
+        return tinggibadan;
+    }
+
+    public void setTinggibadan(Double tinggibadan) {
+        this.tinggibadan = tinggibadan;
+    }
+    public abstract Double hitungbb();
     
 }
